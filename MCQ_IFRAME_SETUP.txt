@@ -1,0 +1,18 @@
+MCQ QUIZ EMBED SETUP
+====================
+
+The PrepOne syllabus page embeds each MCQURL inside an iframe.
+Your quiz Apps Script must allow this.
+
+Example:
+function doGet(e) {
+  const t = HtmlService.createTemplateFromFile('Index');
+  t.topic = e.parameter.topic || '';
+  return t.evaluate()
+    .setTitle('MCQ Quiz')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+Then Deploy -> Manage deployments -> Edit -> New version -> Deploy.
+
+If ALLOWALL is missing, Google may refuse to display the quiz inside the PrepOne page.

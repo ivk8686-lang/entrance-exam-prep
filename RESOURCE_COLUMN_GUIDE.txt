@@ -1,0 +1,34 @@
+PREPONE V6 — TOPIC RESOURCE COLUMN GUIDE
+========================================
+
+Syllabus column order:
+A  SyllabusID
+B  ExamID
+C  Subject
+D  Chapter
+E  Topic
+F  UnitOrder
+G  ChapterOrder
+H  TopicOrder
+I  Weightage (optional)
+J  SourceURL (optional)
+K  Active
+L  MCQ Quiz
+M+ Other resource URL columns
+
+Recommended M+ headers:
+Video 1 | Video 2 | Video 3 | PDF 1 | PDF 2 | Website 1 | Website 2 | Audio 1 | Audio 2 | Image 1 | Image 2
+
+You can add more columns after these, for example:
+Video 4 | PDF 3 | PYQ PDF | Formula Sheet | Website 3 | Audio 3 | Image 3
+
+Rules:
+- Put only one URL in each resource cell.
+- Empty resource cells are hidden automatically.
+- Topic workspace is collapsed by default.
+- Every resource viewer is collapsed by default.
+- MCQ Quiz always displays last inside the topic, even though its Sheet column is L.
+- Use HTTPS URLs.
+- YouTube embeds use youtube-nocookie privacy-enhanced mode and PrepOne blocks pop-ups/top-page navigation in sandboxed iframes.
+- YouTube may still serve advertisements inside its own player. PrepOne cannot remove cross-origin/provider-served in-player ads.
+- For guaranteed ad-free video use a direct MP4/WebM file or an ad-free file host/Google Drive video URL you control.

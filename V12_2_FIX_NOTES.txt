@@ -1,0 +1,23 @@
+PrepOne V12.2 – Content / Teacher / Student / Notes Fixes
+
+1. The frontend no longer silently falls back to seed data when a live backend is configured but the Sheet request fails. It shows a clear error and diagnostics link.
+2. Apps Script now prefers Script Property PREPONE_MASTER_SPREADSHEET_ID, then the bound active spreadsheet, then the legacy fallback ID.
+3. Use diagnostics.html after deployment. It reports the live spreadsheet name, exam count, syllabus count and active student count.
+4. The course page reads resource columns: MCQ Quiz, Video 1-3, PDF 1-2, Website 1-2, Audio 1-2, Image 1-2.
+5. MCQ is rendered last, after normal learning resources.
+6. OfficialURL from Exams is shown as Official Website on course cards and course headers.
+7. Teacher dashboard is fully wired. It can be used even when there are zero students.
+8. Student login uses Student ID + password; no public student-name list is required.
+9. Student dashboard shows a clear no-course-assigned state rather than an empty screen.
+10. Private topic notes appear only for logged-in students, immediately before MCQ in each topic workspace. The note composer is collapsed behind “+ Add note”.
+11. Existing StudentNotes ownership checks and write locking are retained.
+12. The master workbook keeps all 198 syllabus records and resource columns, while removing only Weightage and SourceURL.
+
+DEPLOYMENT
+- If Apps Script is bound to the Master Google Sheet, no spreadsheet ID property is normally required.
+- If Apps Script is standalone, set Script Property:
+  PREPONE_MASTER_SPREADSHEET_ID = <ID of the live Google Sheet>
+- Deploy a NEW Web App version after replacing Code.gs.
+- Set access so the web app can be reached by your intended users.
+- Update config.js with the deployed /exec URL.
+- Open diagnostics.html and confirm the expected Sheet name and counts.

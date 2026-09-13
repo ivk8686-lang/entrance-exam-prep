@@ -1,0 +1,45 @@
+PREPONE V12 PROJECT STRUCTURE
+=============================
+
+PUBLIC FRONTEND
+---------------
+index.html       Public course home + student login
+study.html       Course/syllabus/topic workspace
+student.html     Logged-in student dashboard
+teacher.html     Teacher student management
+practice.html    Practice entry
+exam.html        Exam entry
+mock.html        Mock entry
+planner.html     Planner entry
+progress.html    Progress entry
+resources.html   Resource entry
+diagnostics.html Backend diagnostics
+
+SHARED FRONTEND
+---------------
+assets/app.js        Application logic, navigation, resources, progress, topic notes
+assets/styles.css    Shared responsive UI styles
+config.js            Apps Script /exec endpoint configuration
+seed-data.js         Demo/fallback content
+
+BACKEND
+-------
+Code.gs              Google Apps Script API + authentication + progress + topic notes
+
+DATA / DOCUMENTATION
+--------------------
+PrepOne_Student_Portal_Master_V12.xlsx
+PrepOne_Resource_Schema_V6.xlsx
+PrepOne_Resource_Import_Template_V6.xlsx
+README_STUDENT_PORTAL.txt
+README_DEPLOYMENT.txt
+RESOURCE_COLUMN_GUIDE.txt
+SOURCES_AND_CONTENT_POLICY.txt
+CHANGELOG_V12_NOTES.txt
+
+NOTE DESIGN
+-----------
+Private notes are NOT a separate dashboard/page feature.
+For logged-in students, note-taking appears inside each opened assigned topic,
+immediately before the MCQ Quiz resource(s). Public visitors never see the
+note composer or private note cards.

@@ -1,0 +1,32 @@
+PrepOne V12 — Topic Notes Update
+================================
+
+Requested UX change
+--------------------
+- Removed the large Personal Notes / Study Notes area from student.html.
+- Notes now appear only inside an opened topic in study.html.
+- Notes are inserted before MCQ Quiz resource(s) in the resource list.
+- Notes are visible only when a logged-in student is actively tracking an
+  assigned course.
+
+Topic note features
+--------------------
+- Optional note title.
+- Note body up to 2000 characters.
+- Quick tags: Formula, Mistake, Revision, Important.
+- Save, edit and delete.
+- Existing notes are filtered to the exact Exam + Subject + Chapter + Topic.
+- Compact responsive layout for desktop and mobile.
+
+Backend improvements
+--------------------
+- Server validates that the selected topic belongs to the student's assigned
+  course before saving a note.
+- Student note writes and deletes use LockService.
+- Student progress writes use LockService.
+- Teacher student writes/deletes use LockService.
+
+Workbook improvement
+--------------------
+- Added StudentNotes sheet to the canonical V12 master workbook.
+- Updated Settings SchemaVersion to 12.0.
